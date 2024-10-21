@@ -6,6 +6,7 @@
     <title>HomeBee - Automatisation Intelligente avec Zigbee</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Style général */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
@@ -23,6 +24,16 @@
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .menu-icon {
+            font-size: 24px;
+            display: none;
+            cursor: pointer;
+        }
         nav ul {
             list-style: none;
             padding: 0;
@@ -38,6 +49,30 @@
             color: #333;
             font-weight: 600;
         }
+
+        /* Menu Mobile */
+        @media (max-width: 768px) {
+            nav .menu-icon {
+                display: block;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #FFD700;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                padding: 10px 0;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
+
         #intro {
             padding-top: 100px;
             text-align: center;
@@ -50,23 +85,59 @@
             max-width: 100%;
             height: auto;
         }
-        #features {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #3EB489;
-            color: white;
-        }
-        #services, #automations {
-            padding: 50px 20px;
-            text-align: center;
+        /* Services */
+        #services {
             background-color: #FFF;
+            padding: 50px 20px;
+            text-align: center;
         }
-        .service-item, .automation-item {
+        .service-item {
             margin-bottom: 20px;
         }
-        .service-item h3, .automation-item h3 {
+        .service-item h3 {
             color: #FFD700;
         }
+        /* Testimonials */
+        #testimonials {
+            background-color: #F5F5F5;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .testimonial-item {
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        /* Automations */
+        #automations {
+            background-color: #3EB489;
+            color: white;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .automation-item {
+            margin-bottom: 20px;
+        }
+        .automation-item h3 {
+            color: #FFD700;
+        }
+        /* Call to Action */
+        #cta {
+            background-color: #FFD700;
+            color: #333;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .cta-button {
+            background-color: #3EB489;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .cta-button:hover {
+            background-color: #2C9676;
+        }
+        /* Footer */
         footer {
             background-color: #333;
             color: white;
@@ -77,6 +148,7 @@
             color: #FFD700;
             text-decoration: none;
         }
+        /* Logos */
         .logos {
             display: flex;
             justify-content: center;
@@ -84,7 +156,7 @@
             margin: 15px 0;
         }
         .logos img {
-            height: 40px; /* Hauteur commune pour tous les logos */
+            height: 40px;
             width: auto; /* Conserve le ratio d'origine */
         }
     </style>
@@ -93,7 +165,8 @@
 
     <header>
         <nav>
-            <ul>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+            <ul id="menu">
                 <li><a href="#">Accueil</a></li>
                 <li><a href="#">Produits</a></li>
                 <li><a href="#">Automatisation</a></li>
@@ -106,15 +179,6 @@
         <h1>Bienvenue chez HomeBee</h1>
         <p>Transformez votre maison en une maison intelligente grâce à nos produits Zigbee.</p>
         <img src="image-de-maison-connectée.jpg" alt="Maison connectée">
-    </section>
-
-    <section id="features">
-        <h2>Pourquoi choisir HomeBee ?</h2>
-        <ul>
-            <li>Installation simple et rapide</li>
-            <li>Contrôle depuis votre smartphone</li>
-            <li>Économisez de l'énergie</li>
-        </ul>
     </section>
 
     <section id="services">
@@ -133,20 +197,39 @@
         </div>
     </section>
 
+    <section id="testimonials">
+        <h2>Ce que disent nos clients</h2>
+        <div class="testimonial-item">
+            <p>"Grâce à HomeBee, j'ai pu automatiser toutes mes lumières et mes volets. Tout est contrôlable depuis mon smartphone, c'est juste incroyable !" - <strong>Marie L.</strong></p>
+        </div>
+        <div class="testimonial-item">
+            <p>"L'équipe est très professionnelle et l'installation a été rapide et propre. Je recommande vivement leurs services !" - <strong>Paul D.</strong></p>
+        </div>
+        <div class="testimonial-item">
+            <p>"J'ai enfin une maison connectée, et je peux économiser de l'énergie grâce à leurs solutions ! Merci HomeBee !" - <strong>Anna R.</strong></p>
+        </div>
+    </section>
+
     <section id="automations">
         <h2>Quelques exemples d'automatisation avec Zigbee</h2>
         <div class="automation-item">
             <h3>Éclairage automatique</h3>
-            <p>Contrôlez vos lumières avec des capteurs de mouvement ou programmez-les pour s’allumer au coucher du soleil.</p>
+            <p>Gérez l'éclairage de votre maison de manière intelligente et sans effort grâce aux capteurs de mouvement et aux programmations horaires. Avec Zigbee, vous pouvez configurer vos lumières pour s'allumer progressivement au coucher du soleil, ou s'éteindre automatiquement lorsque vous quittez une pièce.</p>
         </div>
         <div class="automation-item">
             <h3>Sécurité renforcée</h3>
-            <p>Protégez votre maison avec des caméras et détecteurs Zigbee. Soyez alerté immédiatement en cas d'intrusion.</p>
+            <p>Améliorez la sécurité de votre maison avec des caméras et capteurs Zigbee. Connectez des détecteurs de mouvements et des capteurs de porte/fenêtre pour être alerté instantanément en cas d'intrusion.</p>
         </div>
         <div class="automation-item">
             <h3>Thermostat intelligent</h3>
-            <p>Réglez la température de votre maison automatiquement en fonction de votre emploi du temps, tout en économisant de l'énergie.</p>
+            <p>Réglez la température de votre maison automatiquement en fonction de vos habitudes. Vous pouvez définir des plages horaires précises pour chauffer ou rafraîchir votre intérieur, ou activer le chauffage en fonction de votre géolocalisation.</p>
         </div>
+    </section>
+
+    <section id="cta">
+        <h2>Prêt à rendre votre maison plus intelligente ?</h2>
+        <p>Contactez-nous dès aujourd'hui pour un devis gratuit et commencez à automatiser votre maison avec HomeBee.</p>
+        <a href="mailto:contact@homebee.com" class="cta-button">Demander un devis</a>
     </section>
 
     <footer>
@@ -160,5 +243,11 @@
         <a href="mailto:contact@homebee.com">Contactez-nous</a>
     </footer>
 
+    <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+    </script>
 </body>
 </html>
