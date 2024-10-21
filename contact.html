@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - HomeBee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        /* Styles généraux */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        header {
+            background-color: #FFD700;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        #contact {
+            padding: 100px 20px 50px 20px;
+            text-align: center;
+        }
+        #contact h1 {
+            color: #FFD700;
+        }
+        .contact-item {
+            margin: 20px 0;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        form input, form textarea {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        form button {
+            background-color: #3EB489;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        form button:hover {
+            background-color: #2C9676;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="products.html">Produits</a></li>
+                <li><a href="automatisation.html">Automatisation</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="contact">
+        <h1>Contactez-nous</h1>
+        <p>Nous sommes là pour répondre à toutes vos questions concernant nos services et produits.</p>
+        <form>
+            <div class="contact-item">
+                <input type="text" name="name" placeholder="Votre nom" required>
+            </div>
+            <div class="contact-item">
+                <input type="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="contact-item">
+                <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
+            </div>
+            <button type="submit">Envoyer</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2024 HomeBee. Tous droits réservés.</p>
+        <a href="mailto:contact@homebee.com">contact@homebee.com</a>
+    </footer>
+
+</body>
+</html>
