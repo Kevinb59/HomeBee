@@ -5,68 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HomeBee - Automatisation Intelligente avec Zigbee</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <style>
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F5F5F5;
-            color: #333;
-        }
-        header {
-            background-color: #FFD700;
-            padding: 10px 20px;
-            text-align: center;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        nav ul {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            display: flex;
-            justify-content: center;
-        }
-        nav ul li {
-            margin: 0 15px;
-        }
-        nav ul li a {
-            text-decoration: none;
-            color: #333;
-            font-weight: 600;
-        }
-        #intro {
-            padding-top: 100px;
-            text-align: center;
-            background-color: #F5F5F5;
-        }
-        #intro h1 {
-            color: #FFD700;
-        }
-        #intro img {
-            max-width: 100%;
-            height: auto;
-        }
-        #features {
-            padding: 50px 20px;
-            text-align: center;
-            background-color: #3EB489;
-            color: white;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        footer a {
-            color: #FFD700;
-            text-decoration: none;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -87,13 +26,55 @@
         <img src="image-de-maison-connectée.jpg" alt="Maison connectée">
     </section>
 
-    <section id="features">
-        <h2>Pourquoi choisir HomeBee ?</h2>
-        <ul>
-            <li>Installation simple et rapide</li>
-            <li>Contrôle depuis votre smartphone</li>
-            <li>Économisez de l'énergie</li>
-        </ul>
+    <section id="services">
+        <h2>Nos Services</h2>
+        <div class="service-item">
+            <h3>Installation de systèmes domotiques Zigbee</h3>
+            <p>Nous installons et configurons pour vous tous vos appareils compatibles Zigbee, pour une maison plus intelligente et plus connectée.</p>
+        </div>
+        <div class="service-item">
+            <h3>Automatisation sur mesure</h3>
+            <p>Que vous souhaitiez automatiser votre éclairage, chauffage ou sécurité, nous proposons des solutions personnalisées pour répondre à vos besoins spécifiques.</p>
+        </div>
+        <div class="service-item">
+            <h3>Support technique</h3>
+            <p>HomeBee vous accompagne même après l'installation avec un support technique disponible 7 jours sur 7 pour résoudre vos problèmes.</p>
+        </div>
+    </section>
+
+    <section id="testimonials">
+        <h2>Ce que disent nos clients</h2>
+        <div class="testimonial-item">
+            <p>"Grâce à HomeBee, j'ai pu automatiser toutes mes lumières et mes volets. Tout est contrôlable depuis mon smartphone, c'est juste incroyable !" - <strong>Marie L.</strong></p>
+        </div>
+        <div class="testimonial-item">
+            <p>"L'équipe est très professionnelle et l'installation a été rapide et propre. Je recommande vivement leurs services !" - <strong>Paul D.</strong></p>
+        </div>
+        <div class="testimonial-item">
+            <p>"J'ai enfin une maison connectée, et je peux économiser de l'énergie grâce à leurs solutions ! Merci HomeBee !" - <strong>Anna R.</strong></p>
+        </div>
+    </section>
+
+    <section id="automations">
+        <h2>Quelques exemples d'automatisation avec Zigbee</h2>
+        <div class="automation-item">
+            <h3>Éclairage automatique</h3>
+            <p>Contrôlez vos lumières avec des capteurs de mouvement ou programmez-les pour s’allumer au coucher du soleil.</p>
+        </div>
+        <div class="automation-item">
+            <h3>Sécurité renforcée</h3>
+            <p>Protégez votre maison avec des caméras et détecteurs Zigbee. Soyez alerté immédiatement en cas d'intrusion.</p>
+        </div>
+        <div class="automation-item">
+            <h3>Thermostat intelligent</h3>
+            <p>Réglez la température de votre maison automatiquement en fonction de votre emploi du temps, tout en économisant de l'énergie.</p>
+        </div>
+    </section>
+
+    <section id="cta">
+        <h2>Prêt à rendre votre maison plus intelligente ?</h2>
+        <p>Contactez-nous dès aujourd'hui pour un devis gratuit et commencez à automatiser votre maison avec HomeBee.</p>
+        <a href="mailto:contact@homebee.com" class="cta-button">Demander un devis</a>
     </section>
 
     <footer>
