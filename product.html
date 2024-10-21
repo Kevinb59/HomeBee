@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nos Produits - HomeBee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        header {
+            background-color: #FFD700;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        #intro {
+            padding-top: 100px;
+            text-align: center;
+            background-color: #F5F5F5;
+        }
+        #intro h1 {
+            color: #FFD700;
+        }
+        /* Produits */
+        #products {
+            padding: 50px 20px;
+            background-color: #FFF;
+            text-align: center;
+        }
+        .product-item {
+            display: inline-block;
+            width: 250px;
+            margin: 15px;
+            padding: 15px;
+            background-color: #F9F9F9;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+        }
+        .product-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+        .product-item h3 {
+            color: #FFD700;
+            margin: 10px 0;
+        }
+        .product-item p {
+            font-size: 14px;
+            color: #555;
+        }
+        .cta-button {
+            background-color: #3EB489;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 15px;
+            display: inline-block;
+        }
+        .cta-button:hover {
+            background-color: #2C9676;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Accueil</a></li>
+                <li><a href="#">Produits</a></li>
+                <li><a href="#">Automatisation</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="intro">
+        <h1>Nos Produits Zigbee</h1>
+        <p>Découvrez notre gamme complète de produits Zigbee pour rendre votre maison plus intelligente.</p>
+    </section>
+
+    <section id="products">
+        <h2>Catalogue de Produits</h2>
+        <div class="product-item">
+            <img src="chemin-vers-image-lampe.jpg" alt="Lampe intelligente">
+            <h3>Lampe Intelligente</h3>
+            <p>Contrôlez l'éclairage de votre maison avec une lampe connectée compatible Zigbee. Installation facile et commande vocale incluse.</p>
+        </div>
+        <div class="product-item">
+            <img src="chemin-vers-image-thermostat.jpg" alt="Thermostat intelligent">
+            <h3>Thermostat Intelligent</h3>
+            <p>Optimisez la température de votre maison avec un thermostat intelligent programmable et compatible avec les assistants vocaux.</p>
+        </div>
+        <div class="product-item">
+            <img src="chemin-vers-image-camera.jpg" alt="Caméra de sécurité">
+            <h3>Caméra de Sécurité</h3>
+            <p>Protégez votre maison avec une caméra connectée Zigbee offrant une surveillance vidéo en direct sur votre smartphone.</p>
+        </div>
+        <div class="product-item">
+            <img src="chemin-vers-image-capteur.jpg" alt="Capteur de mouvement">
+            <h3>Capteur de Mouvement</h3>
+            <p>Détectez les mouvements et automatisez l'éclairage et la sécurité de votre maison avec ce capteur Zigbee fiable.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2024 HomeBee. Tous droits réservés.</p>
+        <a href="mailto:contact@homebee.com">Contactez-nous</a>
+    </footer>
+
+</body>
+</html>
