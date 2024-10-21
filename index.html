@@ -3,13 +3,74 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HomeBee - Automatisation Intelligente</title>
-    <link rel="stylesheet" href="style.css"> <!-- Lien vers un fichier CSS pour le style -->
+    <title>HomeBee - Automatisation Intelligente avec Zigbee</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #F5F5F5;
+            color: #333;
+        }
+        header {
+            background-color: #FFD700;
+            padding: 10px 20px;
+            text-align: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        #intro {
+            padding-top: 100px;
+            text-align: center;
+            background-color: #F5F5F5;
+        }
+        #intro h1 {
+            color: #FFD700;
+        }
+        #intro img {
+            max-width: 100%;
+            height: auto;
+        }
+        #features {
+            padding: 50px 20px;
+            text-align: center;
+            background-color: #3EB489;
+            color: white;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-    <!-- En-tête avec le titre et la navigation -->
+
     <header>
-        <h1>Bienvenue dans l'Univers de la Domotique Zigbee</h1>
         <nav>
             <ul>
                 <li><a href="#">Accueil</a></li>
@@ -20,28 +81,25 @@
         </nav>
     </header>
 
-    <!-- Section de bienvenue avec un texte introductif -->
     <section id="intro">
-        <h2>Automatisez votre maison avec Zigbee</h2>
-        <p>Découvrez comment les produits Zigbee peuvent transformer votre quotidien avec des solutions simples, efficaces et accessibles.</p>
-        <img src="zigbee-automation.jpg" alt="Domotique Zigbee en action" style="width: 100%; height: auto;"> <!-- Image de présentation -->
+        <h1>Bienvenue chez HomeBee</h1>
+        <p>Transformez votre maison en une maison intelligente grâce à nos produits Zigbee.</p>
+        <img src="image-de-maison-connectée.jpg" alt="Maison connectée">
     </section>
 
-    <!-- Section des points forts de Zigbee -->
     <section id="features">
-        <h2>Pourquoi choisir Zigbee ?</h2>
+        <h2>Pourquoi choisir HomeBee ?</h2>
         <ul>
-            <li>Portée étendue et stabilité du réseau</li>
-            <li>Compatibilité avec une large gamme de produits</li>
-            <li>Faible consommation d'énergie</li>
-            <li>Sécurité renforcée pour vos données</li>
+            <li>Installation simple et rapide</li>
+            <li>Contrôle depuis votre smartphone</li>
+            <li>Économisez de l'énergie</li>
         </ul>
     </section>
 
-    <!-- Pied de page -->
     <footer>
-        <p>© 2024 Domotique Zigbee - Tous droits réservés.</p>
-        <a href="mailto:contact@tonsite.com">Contactez-nous</a>
+        <p>© 2024 HomeBee. Tous droits réservés.</p>
+        <a href="mailto:contact@homebee.com">Contactez-nous</a>
     </footer>
+
 </body>
 </html>
