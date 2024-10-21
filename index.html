@@ -162,8 +162,10 @@
             flex-wrap: wrap;
         }
         .logos img {
-            height: 40px;
-            width: auto; /* Conserve le ratio d'origine */
+            height: 40px; /* Hauteur commune pour toutes les images */
+            width: auto;  /* Conserve le ratio d'origine */
+            max-width: 100%; /* Empêche l'image de s'étirer au-delà de sa taille originale */
+            object-fit: contain; /* Assure que l'image reste contenue dans ses dimensions */
         }
         @media (max-width: 768px) {
             .logos {
@@ -263,10 +265,10 @@
     <footer>
         <p>© 2024 HomeBee. Tous droits réservés.</p>
         <div class="logos">
-            <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/logo%20alexa.jpg" alt="Logo Zigbee">
-            <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/logo%20google.jpg" alt="Logo Smart Life">
-            <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/logo%20smartlife.jpg" alt="Logo Google Assistant">
-            <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/logo%20zigbee.jpg" alt="Logo Alexa">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1e/Zigbee_logo.svg/1024px-Zigbee_logo.svg.png" alt="Logo Zigbee">
+            <img src="https://y3k.com/cdn/shop/files/smartlife-top-logo.png?v=1676470180" alt="Logo Smart Life">
+            <img src="https://logodownload.org/wp-content/uploads/2020/02/google-assistant-logo.png" alt="Logo Google Assistant">
+            <img src="https://logos-world.net/wp-content/uploads/2021/02/Amazon-Alexa-Logo-2015-2017.png" alt="Logo Alexa">
         </div>
         <a href="mailto:contact@homebee.com">Contactez-nous</a>
     </footer>
