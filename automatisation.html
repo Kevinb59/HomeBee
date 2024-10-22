@@ -5,12 +5,16 @@
     <title>Automatisation - HomeBee</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Styles généraux */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
             background-color: #F5F5F5;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Hauteur minimale de la fenêtre */
         }
         header {
             background-color: #FFD700;
@@ -25,6 +29,7 @@
         #automatisation {
             padding-top: 100px;
             text-align: center;
+            flex: 1;
         }
         .category-buttons {
             display: flex;
@@ -42,7 +47,8 @@
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
-        .category-buttons button:hover {
+        .category-buttons button:hover,
+        .category-buttons button.active {
             background-color: #E0B800;
         }
         .category-content {
@@ -57,13 +63,80 @@
         .category-content.active {
             display: block; /* Afficher la catégorie sélectionnée */
         }
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            margin-top: auto; /* Permet au footer de rester en bas */
+        }
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        nav .menu-icon {
+            font-size: 24px;
+            display: none;
+            cursor: pointer;
+            align-items: center;
+        }
+        nav .menu-icon span {
+            margin-left: 5px;
+            font-weight: 600;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+            font-weight: 600;
+        }
+        
+        /* Menu Mobile */
+        @media (max-width: 768px) {
+            nav .menu-icon {
+                display: flex;
+            }
+            nav ul {
+                display: none;
+                flex-direction: column;
+                width: 100%;
+                background-color: #FFD700;
+                position: absolute;
+                top: 50px;
+                left: 0;
+                padding: 10px 0;
+            }
+            nav ul.show {
+                display: flex;
+            }
+            nav ul li {
+                margin: 10px 0;
+            }
+        }
     </style>
 </head>
 <body>
 
     <header>
         <nav>
-            <ul>
+            <div class="menu-icon" onclick="toggleMenu()">
+                &#9776;<span>Menu</span>
+            </div>
+            <ul id="menu">
                 <li><a href="index.html">Accueil</a></li>
                 <li><a href="products.html">Produits</a></li>
                 <li><a href="automatisation.html">Automatisation</a></li>
@@ -77,10 +150,10 @@
         <p>Choisissez une catégorie pour découvrir les solutions d'automatisation proposées.</p>
 
         <div class="category-buttons">
-            <button onclick="showCategory('eclairage')">Éclairage</button>
-            <button onclick="showCategory('chauffage')">Chauffage</button>
-            <button onclick="showCategory('irrigation')">Irrigation</button>
-            <button onclick="showCategory('securite')">Sécurité</button>
+            <button onclick="showCategory('eclairage')" id="btn-eclairage">Éclairage</button>
+            <button onclick="showCategory('chauffage')" id="btn-chauffage">Chauffage</button>
+            <button onclick="showCategory('irrigation')" id="btn-irrigation">Irrigation</button>
+            <button onclick="showCategory('securite')" id="btn-securite">Sécurité</button>
         </div>
 
         <div id="eclairage" class="category-content">
@@ -101,13 +174,28 @@
         </div>
     </section>
 
+    <footer>
+        <p>© 2024 HomeBee. Tous droits réservés.</p>
+        <a href="mailto:contact@homebee.com">contact@homebee.com</a>
+    </footer>
+
     <script>
+        function toggleMenu() {
+            const menu = document.getElementById('menu');
+            menu.classList.toggle('show');
+        }
+
         function showCategory(categoryId) {
             const categories = document.querySelectorAll('.category-content');
-            categories.forEach(category => {
-                category.classList.remove('active');
-            });
+            const buttons = document.querySelectorAll('.category-buttons button');
+            
+            // Masquer toutes les catégories et désactiver les boutons
+            categories.forEach(category => category.classList.remove('active'));
+            buttons.forEach(button => button.classList.remove('active'));
+
+            // Afficher la catégorie sélectionnée et activer le bouton correspondant
             document.getElementById(categoryId).classList.add('active');
+            document.getElementById('btn-' + categoryId).classList.add('active');
         }
     </script>
 </body>
