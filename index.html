@@ -79,17 +79,23 @@
         }
 
         #intro {
-            padding-top: 100px;
-            text-align: center;
-            background-color: #F5F5F5;
+            margin-top: 0; /* Supprime l'espace entre le menu et l'image */
+            padding-top: 0; /* Supprime tout padding */
+            overflow: hidden; /* Assure que l'image tronquée ne dépasse pas */
+            position: relative;
+        }
+        
+        #intro img {
+            width: 100%; /* Fait en sorte que l'image couvre toute la largeur */
+            height: auto; /* Ajuste automatiquement la hauteur */
+            max-height: none; /* Enlève toute contrainte sur la hauteur */
+            object-fit: cover; /* Coupe l'image si nécessaire pour remplir la zone */
+            object-position: center; /* Centre l'image */
         }
         #intro h1 {
             color: #FFD700;
         }
-        #intro img {
-            max-width: 100%;
-            height: auto;
-        }
+        
         /* Services */
         #services {
             background-color: #FFF;
@@ -257,7 +263,7 @@
     </header>
 
     <section id="intro">
-        <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/image en-tete.jpg" alt="Image d'une maison connectée" style="width: 100%; height: auto;">
+        <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/image en-tete.jpg" alt="Image d'une maison connectée">
         <h1>Bienvenue chez HomeBee</h1>
         <p>Transformez votre maison en une maison intelligente grâce à nos produits Zigbee.</p>
     </section>
