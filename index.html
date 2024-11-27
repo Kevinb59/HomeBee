@@ -82,15 +82,21 @@
             margin: 0; /* Supprime les marges */
             padding: 0; /* Supprime les espacements */
             position: relative;
-            overflow: hidden; /* Cache les parties de l'image qui débordent */
-            height: 300px; /* Ajustez la hauteur selon vos besoins */
+            height: 352px; /* Ajustez selon la hauteur souhaitée */
+            overflow: hidden; /* Cache les parties débordantes de l'image */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         #intro img {
-            width: 100%; /* L'image couvre toute la largeur */
-            height: 100%; /* L'image couvre toute la hauteur de la section */
-            object-fit: cover; /* Coupe l'image pour s'adapter à la zone définie */
-            object-position: center; /* Centre l'image */
+            position: absolute;
+            top: 50%; /* Centre verticalement */
+            left: 50%; /* Centre horizontalement */
+            transform: translate(-50%, -50%); /* Compense le centrage */
+            height: auto; /* Conserve le ratio de l'image */
+            min-height: 100%; /* Assure que l'image couvre la hauteur */
+            min-width: 100%; /* Assure que l'image couvre la largeur */
         }
         #intro h1 {
             color: #FFD700;
