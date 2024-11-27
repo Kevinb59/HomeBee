@@ -13,7 +13,11 @@
             padding: 0;
             background-color: #F5F5F5;
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Hauteur minimale de la fenêtre */
         }
+        
         header {
             background-color: #FFD700;
             padding: 10px 20px;
@@ -24,67 +28,25 @@
             z-index: 1000;
             box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         }
-        #contact {
-            padding: 100px 20px 50px 20px;
-            text-align: center;
-        }
-        #contact h1 {
-            color: #FFD700;
-        }
-        .contact-item {
-            margin: 20px 0;
-        }
-        form {
-            max-width: 600px;
-            margin: 0 auto;
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        form input, form textarea {
-            width: 100%;
-            padding: 10px;
-            margin: 10px 0;
-            border: 1px solid #ddd;
-            border-radius: 5px;
-        }
-        form button {
-            background-color: #3EB489;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-        }
-        form button:hover {
-            background-color: #2C9676;
-        }
-        footer {
-            background-color: #333;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-        footer a {
-            color: #FFD700;
-            text-decoration: none;
-        }
+
         nav {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
+
         nav .menu-icon {
             font-size: 24px;
             display: none;
             cursor: pointer;
             align-items: center;
         }
+
         nav .menu-icon span {
             margin-left: 5px;
             font-weight: 600;
         }
+
         nav ul {
             list-style: none;
             padding: 0;
@@ -92,9 +54,11 @@
             display: flex;
             justify-content: center;
         }
+
         nav ul li {
             margin: 0 15px;
         }
+
         nav ul li a {
             text-decoration: none;
             color: #333;
@@ -123,37 +87,79 @@
                 margin: 10px 0;
             }
         }
-        form input, form textarea {
+
+        #contact {
+            padding: 100px 20px 50px 20px;
+            text-align: center;
+            flex: 1; /* Permet à la section de prendre tout l'espace disponible */
+        }
+
+        #contact h1 {
+            color: #FFD700;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+        }
+
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        form input, form textarea, form select {
             width: 100%;
             padding: 12px; /* Augmenter légèrement le padding */
             margin: 15px 0; /* Créer plus d'espace entre les champs */
             border: 1px solid #ddd;
             border-radius: 5px;
             box-sizing: border-box; /* Pour que le padding ne dépasse pas la largeur */
+            font-size: 16px;
+        }
+
+        form select {
+            background-color: #fff;
+            color: #333;
+        }
+
+        form select:focus {
+            outline: none;
+            border-color: #3EB489;
+        }
+
+        form textarea {
             resize: vertical; /* Permet seulement le redimensionnement en hauteur */
         }
-        /* Styles généraux */
-        body {
-            font-family: 'Poppins', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #F5F5F5;
-            color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh; /* Hauteur minimale de la fenêtre */
+
+        form button {
+            background-color: #3EB489;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
         }
-        
-        #contact {
-            flex: 1; /* Permet à la section de prendre tout l'espace disponible */
+
+        form button:hover {
+            background-color: #2C9676;
         }
-        
+
         footer {
             background-color: #333;
             color: white;
             padding: 20px;
             text-align: center;
             margin-top: auto; /* Permet au footer de rester en bas */
+        }
+
+        footer a {
+            color: #FFD700;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -182,6 +188,21 @@
             </div>
             <div class="contact-item">
                 <input type="email" name="email" placeholder="Votre email" required>
+            </div>
+            <div class="contact-item">
+                <label for="reason">Raison de contact</label>
+                <select id="reason" name="reason" required>
+                    <option value="" disabled selected>Veuillez sélectionner une raison</option>
+                    <option value="renseignements">Demande de renseignements</option>
+                    <option value="devis">Demande de devis</option>
+                    <option value="achat">Achat de produits</option>
+                    <option value="sav">Assistance après-vente</option>
+                    <option value="collaboration">Collaboration professionnelle</option>
+                    <option value="retour">Retour ou remboursement</option>
+                    <option value="suggestion">Suggestion ou feedback</option>
+                    <option value="technique">Problème technique</option>
+                    <option value="autre">Autre</option>
+                </select>
             </div>
             <div class="contact-item">
                 <textarea name="message" placeholder="Votre message" rows="6" required></textarea>
