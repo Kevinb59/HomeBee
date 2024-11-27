@@ -79,24 +79,23 @@
         }
 
         #intro {
-            margin: 0; /* Supprime les marges */
-            padding: 0; /* Supprime les espacements */
+            margin: 0;
+            padding: 0;
             position: relative;
-            height: 352px; /* Ajustez cette hauteur selon vos besoins */
-            overflow: hidden; /* Coupe les parties débordantes de l'image */
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            height: 352px; /* Ajustez la hauteur selon vos besoins */
+            overflow: hidden; /* Cache les parties débordantes */
+            background-color: #f5f5f5; /* Couleur de fond en cas de chargement lent */
         }
         
         #intro img {
             position: absolute;
             top: 50%; /* Centre verticalement */
             left: 50%; /* Centre horizontalement */
-            transform: translate(-50%, -50%); /* Compense pour un centrage parfait */
+            transform: translate(-50%, -50%); /* Centre parfaitement l'image */
             width: auto; /* Conserve les proportions d'origine */
-            height: 300px; /* Fait correspondre à la hauteur de la section */
-            min-width: 100%; /* Coupe les bords si nécessaire */
+            height: auto; /* Conserve les proportions d'origine */
+            min-height: 100%; /* Remplit toute la hauteur de la section */
+            min-width: 100%; /* Remplit toute la largeur de la section */
         }
 
         #intro h1 {
