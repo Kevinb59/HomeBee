@@ -82,20 +82,23 @@
             margin: 0; /* Supprime les marges */
             padding: 0; /* Supprime les espacements */
             position: relative;
-            height: 352px; /* Définissez la hauteur souhaitée */
+            height: 352px; /* Ajustez cette hauteur selon vos besoins */
             overflow: hidden; /* Coupe les parties débordantes de l'image */
-            display: block; /* Assure que l'image est contenue dans son parent */
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
         
         #intro img {
             position: absolute;
             top: 50%; /* Centre verticalement */
             left: 50%; /* Centre horizontalement */
-            transform: translate(-50%, -50%); /* Compense le décalage pour centrer */
-            width: auto; /* Ne pas compresser en largeur */
-            height: 100%; /* S'assurer que l'image remplit toute la hauteur */
-            min-width: 100%; /* Remplit au moins toute la largeur, coupant les bords */
+            transform: translate(-50%, -50%); /* Compense pour un centrage parfait */
+            width: auto; /* Conserve les proportions d'origine */
+            height: 300px; /* Fait correspondre à la hauteur de la section */
+            min-width: 100%; /* Coupe les bords si nécessaire */
         }
+
         #intro h1 {
             color: #FFD700;
         }
