@@ -82,25 +82,41 @@
             margin: 0;
             padding: 0;
             position: relative;
-            height: 352px; /* Ajustez la hauteur selon vos besoins */
-            overflow: hidden; /* Cache les parties de l'image qui débordent */
+        }
+        
+        .image-container {
+            height: 352px; /* Ajustez selon vos besoins */
+            overflow: hidden;
+            background-color: #f5f5f5; /* Couleur de fond en cas de chargement lent */
             display: flex;
             align-items: center;
             justify-content: center;
-            background-color: #f5f5f5; /* Couleur de fond en cas de chargement lent */
         }
         
-        #intro img {
+        .image-container img {
             position: relative;
             max-width: none; /* Désactive les contraintes automatiques de taille */
             width: auto; /* Préserve les proportions de l'image */
             height: 100%; /* Remplit toute la hauteur du conteneur */
             object-fit: cover; /* Coupe les bords si nécessaire */
         }
-
-        #intro h1 {
-            color: #FFD700;
+        
+        .text-container {
+            text-align: center;
+            padding: 20px 10px;
+            background-color: #FFF; /* Si vous voulez un contraste */
         }
+        
+        .text-container h1 {
+            color: #FFD700;
+            margin-bottom: 10px;
+        }
+        
+        .text-container p {
+            color: #333;
+            margin: 0;
+        }
+
         
         /* Services */
         #services {
@@ -269,9 +285,13 @@
     </header>
 
     <section id="intro">
-        <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/image en-tete.jpg" alt="Image d'une maison connectée">
-        <h1>Bienvenue chez HomeBee</h1>
-        <p>Transformez votre maison en une maison intelligente grâce à nos produits Zigbee.</p>
+        <div class="image-container">
+            <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/image en-tete.jpg" alt="Image d'une maison connectée">
+        </div>
+        <div class="text-container">
+            <h1>Bienvenue chez HomeBee</h1>
+            <p>Transformez votre maison en une maison intelligente grâce à nos produits Zigbee.</p>
+        </div>
     </section>
 
     <section id="services">
