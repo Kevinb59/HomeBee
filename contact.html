@@ -223,5 +223,24 @@
         }
     </script>
 
+    <script>
+        // Fonction pour récupérer les paramètres de l'URL
+        function getQueryParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+    
+        // Pré-remplir la raison de contact si le paramètre "reason" est dans l'URL
+        window.addEventListener('DOMContentLoaded', () => {
+            const reason = getQueryParameter('reason');
+            if (reason) {
+                const reasonSelect = document.getElementById('reason');
+                if (reasonSelect) {
+                    reasonSelect.value = reason;
+                }
+            }
+        });
+    </script>
+
 </body>
 </html>
