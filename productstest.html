@@ -37,6 +37,20 @@
             background-color: #FFF;
             text-align: center;
         }
+        .product-category {
+            margin-bottom: 20px;
+        }
+        .product-category h3 {
+            cursor: pointer;
+            background-color: #FFD700;
+            padding: 10px;
+            border-radius: 5px;
+            color: #333;
+        }
+        .product-items {
+            display: none;
+            margin-top: 15px;
+        }
         .product-item {
             display: inline-block;
             width: 250px;
@@ -148,7 +162,7 @@
 
     <section id="intro">
         <h1>Nos Produits Zigbee</h1>
-        <p>Découvrez une sélection de notre gamme complète de produits. Les articles présentés ici ne représentent qu'une partie des articles, modèles et coloris disponibles pour rendre votre maison plus intelligente.</p>
+        <p>Découvrez une sélection de notre gamme complète de produits. Cliquez sur une catégorie pour explorer les articles disponibles.</p>
         <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/logo%20produits.png" alt="Maison connectée" class="logo-produits">
     </section>
 
@@ -156,78 +170,34 @@
         <h2>Catalogue de Produits Zigbee</h2>
 
         <div class="product-category">
-            <h3>Éclairage Intélligent</h3>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Projecteur_%C3%89toil%C3%A9_Intelligent.jpg">
-                <h4>Projecteur Étoilé intelligent</h4>
-                <p>Un projecteur de lumière étoilée pour créer une ambiance relaxante et immersive dans votre maison connectée.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Ampoule_LED_Wifi-Zigbee.jpg">
-                <h4>Ampoule LED Wifi/Zigbee (14W, E27)</h4>
-                <p>Ampoule LED connectée contrôlable via Wi-Fi ou Zigbee, compatible avec les commandes vocales.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Ampoule_LED_GU10_Wifi.jpg">
-                <h4>Ampoule LED GU10 Wifi/Zigbee</h4>
-                <p>Ampoule GU10 intelligente, idéale pour un éclairage ciblé et programmable via une application mobile.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Spot_Encastre_Wifi.jpg">
-                <h4>Spot encastré Wifi (7W, 10W)</h4>
-                <p>Spot encastré intelligent pour un éclairage moderne, réglable en intensité et en couleur.</p>
+            <h3 onclick="toggleCategory('eclairage')">Éclairage Intélligent</h3>
+            <div id="eclairage" class="product-items">
+                <div class="product-item">
+                    <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Projecteur_%C3%89toil%C3%A9_Intelligent.jpg">
+                    <h4>Projecteur Étoilé intelligent</h4>
+                    <p>Un projecteur de lumière étoilée pour créer une ambiance relaxante et immersive dans votre maison connectée.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Ampoule_LED_Wifi-Zigbee.jpg">
+                    <h4>Ampoule LED Wifi/Zigbee (14W, E27)</h4>
+                    <p>Ampoule LED connectée contrôlable via Wi-Fi ou Zigbee, compatible avec les commandes vocales.</p>
+                </div>
             </div>
         </div>
 
         <div class="product-category">
-            <h3>Rideaux Connectés</h3>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Moteur_de_Rideaux_Zigbee-Bluetooth.jpg">
-                <h4>Moteur de rideaux Zigbee/Bluetooth</h4>
-                <p>Motorisez vos rideaux pour un contrôle intelligent à distance, avec des intégrations Zigbee et Bluetooth.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Moteur_de_Rideaux_Wifi.jpg">
-                <h4>Moteur de rideaux Wifi</h4>
-                <p>Moteur connecté pour gérer l’ouverture et la fermeture de vos rideaux depuis une application mobile.</p>
-            </div>
-        </div>
-
-        <div class="product-category">
-            <h3>Capteurs Intelligents</h3>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Capteur_de_Mouvement_Wifi-Zigbee.jpg">
-                <h4>Capteur de mouvement Wifi/Zigbee</h4>
-                <p>Détecteur de mouvement connecté pour l’automatisation de l’éclairage ou des alertes de sécurité.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Detecteur-de-Gaz-Zigbee.jpg">
-                <h4>Détecteur de gaz Zigbee</h4>
-                <p>Capteur intelligent pour détecter les fuites de gaz et envoyer des alertes en temps réel.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Capteur-de-Temperature-et-Humidite.jpg">
-                <h4>Capteur de température et humidité Wifi/Zigbee/Bluetooth</h4>
-                <p>Capteur environnemental mesurant la température et l’humidité, pour optimiser votre confort.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Capteur-Magnetique-Zigbee.jpg">
-                <h4>Capteur magnétique Zigbee</h4>
-                <p>Détecteur d’ouverture pour portes et fenêtres, idéal pour renforcer la sécurité de votre domicile.</p>
-            </div>
-        </div>
-
-        <div class="product-category">
-            <h3>Interrupteurs et Prises Intelligentes</h3>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Interrupteur_Zigbee_1-4_boutons.jpg">
-                <h4>Interrupteur Zigbee 1 à 4 boutons</h4>
-                <p>Interrupteur intelligent Zigbee disponible en plusieurs configurations pour contrôler plusieurs appareils.</p>
-            </div>
-            <div class="product-item">
-                <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Interrupteur_Zigbee_1-4_boutons-tactile.jpg">
-                <h4>Interrupteur Wifi/Zigbee 1-4 boutons tactiles</h4>
-                <p>Interrupteur intelligent Wifi/Zigbee disponible en plusieurs configurations pour contrôler plusieurs appareils.</p>
+            <h3 onclick="toggleCategory('rideaux')">Rideaux Connectés</h3>
+            <div id="rideaux" class="product-items">
+                <div class="product-item">
+                    <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Moteur_de_Rideaux_Zigbee-Bluetooth.jpg">
+                    <h4>Moteur de rideaux Zigbee/Bluetooth</h4>
+                    <p>Motorisez vos rideaux pour un contrôle intelligent à distance, avec des intégrations Zigbee et Bluetooth.</p>
+                </div>
+                <div class="product-item">
+                    <img src="https://raw.githubusercontent.com/Kevinb59/HomeBee/refs/heads/main/products-images/Moteur_de_Rideaux_Wifi.jpg">
+                    <h4>Moteur de rideaux Wifi</h4>
+                    <p>Moteur connecté pour gérer l’ouverture et la fermeture de vos rideaux depuis une application mobile.</p>
+                </div>
             </div>
         </div>
     </section>
@@ -241,6 +211,11 @@
         function toggleMenu() {
             const menu = document.getElementById('menu');
             menu.classList.toggle('show');
+        }
+
+        function toggleCategory(id) {
+            const category = document.getElementById(id);
+            category.style.display = category.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
